@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock head %}
+
+{% block body %}
+<h1> Recipe Classifier </h1>
+<div class="form">
+    <form action="/classifier" method="POST">
+        <input type="text" name="query" id="query">
+        <input type="submit" value="Classify">
+    </form>
+</div>
+{% endblock body %}

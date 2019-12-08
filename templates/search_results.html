@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock head %}
+
+{% block body %}
+<h1> Recipe Search </h1>
+<div class="form">
+    <form action="/search" method="POST">
+        <input type="text" name="query" id="query" placeholder="Search by ingredients">
+        <input type="submit" value="Search">
+    </form>
+</div>
+<h2> Search Results </h2>
+{% if length ==-1 %}
+<p> No results found </p>
+<hr>
+{% endif %}
+{% for i in range(0,length)%}
+<h4>{{ recipes['Recipe'][i] }} </h4>
+<p>{{ highlighted[i] |safe}}</p>
+<h5> Calculations </h5>
+<table style="width:100%">
+<tr>
+  <th> query </th> <th> tf </th> <th> idf </th> <th>tf-idf</th>
+</tr>
+{% for column in recipes['Calculations'][i] %}
+  <tr>
+      <td>{{ column[0] }}</td>
+      <td>{{ '%0.5f' | format(column[1])}}</td>
+      <td>{{ '%0.5f' | format(column[2])}}</td>
+      <td>{{ '%0.5f' | format(column[3])}}</td>
+  </tr>
+{% endfor %}
+<tr>
+    <th>Cosine Similarity </th>
+    <td> {{recipes['CosineSim'][i]}}</td>
+</tr>
+</table>
+<hr>
+
+{% endfor %}
+{% endblock body %}
