@@ -40,7 +40,6 @@ class TextSearch:
     def BuildInvertedIndex(self):
         print('building inverted index.Please wait...')
         self.totalDocument  = self.RecipeData.shape[0]
-        self.totalDocument = 50 #need to comment only for debuging
         for index in range(self.totalDocument):
             terms = self.tokenize(self.RecipeData.loc[index, 'instructions'])
             self.length.append(len(terms))
