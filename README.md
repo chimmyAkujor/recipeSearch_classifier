@@ -2,6 +2,7 @@
 This project has two parts. 
 i. Recipe Search (Textsearch.py) searches through a recipe dataset using ingredients as keywords, the results are ranked using tf-idf weight scores.
 ii. Recipe Classification (NaiveBayes.py) classifies a group of ingredient keywords and tries to predict which cuisine it belongs to. Naive Bayes is used to calculate the probability.
+iii. Image Captioner (image_captioner) finds captions for images found in test_images folder
 
 ## How to Run
 ```bash
