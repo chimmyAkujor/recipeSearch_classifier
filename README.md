@@ -21,5 +21,7 @@ python3 app.py
 ### then go to http://127.0.0.1:5000 or  http://localhost:5000 on your browser to access the homepage
 # Reference
 https://www.geeksforgeeks.org/tf-idf-model-for-page-ranking/
+
 https://github.com/BhaskarTrivedi/QuerySearch_Recommentation_Classification
+
 https://www.youtube.com/watch?v=CPqOCI0ahss
